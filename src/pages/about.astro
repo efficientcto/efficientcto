@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<BaseLayout
+  title="About – Efficient CTO"
+  description="Learn about Mehmet, a fractional CTO with 20+ years of experience helping startups build scalable technology."
+>
+  <Header />
+
+  <main>
+    <h1 style="font-size:2.5rem; color:var(--color-navy); margin-top:3rem;">
+      About Efficient CTO
+    </h1>
+
+    <p style="max-width:700px; margin-top:1rem; color:#475569;">
+      Efficient CTO was founded to help startups and growing businesses make smarter technical decisions,
+      build scalable products, and accelerate engineering execution — without the cost of a full-time CTO.
+    </p>
+
+    <h2 style="margin-top:3rem; color:var(--color-navy);">Experience</h2>
+    <ul style="line-height:1.7; color:#475569;">
+      <li>20+ years in software engineering</li>
+      <li>Leadership roles in startups and enterprise companies</li>
+      <li>Architecture, product strategy, and engineering management</li>
+      <li>AI consulting and automation strategy</li>
+    </ul>
+
+    <h2 style="margin-top:3rem; color:var(--color-navy);">Leadership Philosophy</h2>
+    <p style="max-width:700px; color:#475569;">
+      Technology should accelerate business outcomes — not slow them down. My approach blends strategic
+      clarity with hands-on execution, helping founders move faster with confidence.
+    </p>
+
+    <h2 style="margin-top:3rem; color:var(--color-navy);">Mission</h2>
+    <p style="max-width:700px; color:#475569;">
+      To empower founders and teams with the technical leadership they need to build great products,
+      scale efficiently, and avoid costly mistakes.
+    </p>
+
+    <CTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
