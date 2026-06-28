@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CTA from "../../components/CTA.astro";
+---
+
+<BaseLayout
+  title="Fractional CTO – Efficient CTO"
+  description="Part-time CTO leadership for startups and growing businesses."
+>
+  <Header />
+
+  <main>
+    <h1 style="font-size:2.5rem; color:var(--color-navy); margin-top:3rem;">
+      Fractional CTO
+    </h1>
+
+    <p style="max-width:700px; margin-top:1rem; color:#475569;">
+      Get executive-level technology leadership without the cost of a full-time CTO. Ideal for startups,
+      scale-ups, and founders who need strategic guidance, architecture oversight, and engineering leadership.
+    </p>
+
+    <h2 style="margin-top:3rem; color:var(--color-navy);">What You Get</h2>
+    <ul style="line-height:1.7; color:#475569;">
+      <li>Technology strategy & roadmap</li>
+      <li>Architecture guidance</li>
+      <li>Engineering team leadership</li>
+      <li>Hiring & talent evaluation</li>
+      <li>Execution oversight</li>
+      <li>Founder advisory</li>
+    </ul>
+
+    <h2 style="margin-top:3rem; color:var(--color-navy);">Process</h2>
+    <ol style="line-height:1.7; color:#475569;">
+      <li>Discovery & goals</li>
+      <li>Technical assessment</li>
+      <li>Roadmap creation</li>
+      <li>Ongoing leadership</li>
+    </ol>
+
+    <CTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
