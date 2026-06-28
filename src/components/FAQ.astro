@@ -1,0 +1,20 @@
+---
+const { items } = Astro.props;
+---
+
+<section>
+  {items.map((faq) => (
+    <details style="
+      background: white;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(148,163,184,0.3);
+    ">
+      <summary style="cursor: pointer; font-weight: 600; color: var(--color-navy);">
+        {faq.question}
+      </summary>
+      <p style="margin-top: 0.75rem; color: #475569;">{faq.answer}</p>
+    </details>
+  ))}
+</section>
