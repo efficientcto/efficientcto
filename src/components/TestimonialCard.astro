@@ -1,0 +1,15 @@
+---
+const { quote, name, role } = Astro.props;
+---
+
+<div style="
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(148,163,184,0.2);
+">
+  <p style="font-style: italic; color: #334155;">“{quote}”</p>
+  <div style="margin-top: 1rem; font-weight: 600; color: var(--color-navy);">{name}</div>
+  <div style="color: #64748b; font-size: 0.85rem;">{role}</div>
+</div>
