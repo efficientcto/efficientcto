@@ -1,0 +1,32 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/ai-consulting', label: 'AI Consulting' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' }
+];
+
+const strategyCallUrl = 'https://your-booking-link-here'; // replace with Calendly or similar
+---
+
+<header>
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">
+      <span>Efficient CTO</span>
+    </a>
+
+    <div class="navbar-links">
+      {navLinks.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+    </div>
+
+    <div class="navbar-cta">
+      <a href={strategyCallUrl} class="btn btn-primary">
+        Book a Strategy Call
+      </a>
+    </div>
+  </nav>
+</header>
