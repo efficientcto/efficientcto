@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CTA from "../../components/CTA.astro";
+---
+
+<BaseLayout
+  title="Software Architecture – Efficient CTO"
+  description="Design scalable, maintainable systems that grow with your business."
+>
+  <Header />
+
+  <main>
+    <h1 style="font-size:2.5rem; color:var(--color-navy); margin-top:3rem;">
+      Software Architecture
+    </h1>
+
+    <p style="max-width:700px; margin-top:1rem; color:#475569;">
+      Build systems that scale. Improve reliability, performance, and maintainability with modern architecture
+      patterns and best practices.
+    </p>
+
+    <h2 style="margin-top:3rem; color:var(--color-navy);">Focus Areas</h2>
+    <ul style="line-height:1.7; color:#475569;">
+      <li>System design</li>
+      <li>API architecture</li>
+      <li>Cloud architecture</li>
+      <li>Scalability & performance</li>
+      <li>Security & compliance</li>
+      <li>Technical debt reduction</li>
+    </ul>
+
+    <CTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
