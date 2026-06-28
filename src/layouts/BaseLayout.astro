@@ -1,5 +1,17 @@
 ---
-const { title = 'Efficient CTO', description = 'Fractional CTO and technology leadership for startups and growing businesses.' } = Astro.props;
+const {
+  title = "Efficient CTO",
+  description = "Fractional CTO services for startups and growing businesses.",
+  canonical = "https://efficientcto.com" + Astro.url.pathname
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": title,
+  "description": description,
+  "url": canonical
+};
 ---
 
 <html lang="en">
@@ -10,20 +22,28 @@ const { title = 'Efficient CTO', description = 'Fractional CTO and technology le
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <link rel="canonical" href="https://efficientcto.com" />
+    <link rel="canonical" href={canonical} />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://efficientcto.com" />
+    <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Efficient CTO" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
+    <!-- Schema -->
+    <script type="application/ld+json">
+      {JSON.stringify(schema)}
+    </script>
+
     <link rel="stylesheet" href="/global.css" />
   </head>
+
   <body>
     <slot />
   </body>
