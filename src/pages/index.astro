@@ -1,7 +1,28 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import Hero from "../components/Hero.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import ProcessStep from "../components/ProcessStep.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import FAQ from "../components/FAQ.astro";
+
+const faqItems = [
+  {
+    question: "What is a Fractional CTO?",
+    answer: "A part-time technology leader who provides strategic guidance without the cost of a full-time executive."
+  },
+  {
+    question: "Who is this service for?",
+    answer: "Startups, founders, and growing businesses that need technical leadership but aren’t ready for a full-time CTO."
+  },
+  {
+    question: "Do you work with non-technical founders?",
+    answer: "Yes — most clients are founders who need help making technical decisions confidently."
+  }
+];
 ---
 
 <BaseLayout
@@ -11,11 +32,108 @@ import Footer from '../components/Footer.astro';
   <Header />
 
   <main>
-    <h1>Efficient CTO</h1>
-    <p>
-      This is the initial Milestone 1 layout. Header, footer, navigation, and global styles are in place.
-      The full home page content will be added in the next milestone.
-    </p>
+
+    <Hero />
+
+    <!-- Services -->
+    <section style="margin-top: 4rem;">
+      <h2 style="text-align: center; color: var(--color-navy); font-size: 2rem;">
+        Services
+      </h2>
+
+      <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      ">
+        <ServiceCard title="Fractional CTO" description="Strategic technology leadership without the full-time cost." />
+        <ServiceCard title="AI Consulting" description="Practical AI adoption for real business outcomes." />
+        <ServiceCard title="Software Architecture" description="Design scalable, maintainable systems that grow with your business." />
+        <ServiceCard title="Engineering Leadership" description="Improve execution, velocity, and team performance." />
+        <ServiceCard title="Technical Due Diligence" description="Assess risks and opportunities before investing or acquiring." />
+        <ServiceCard title="Startup Technology Strategy" description="Build the right product with the right technology stack." />
+      </div>
+    </section>
+
+    <!-- Why Efficient CTO -->
+    <section style="margin-top: 5rem;">
+      <h2 style="text-align: center; color: var(--color-navy); font-size: 2rem;">
+        Why Efficient CTO
+      </h2>
+
+      <ul style="
+        max-width: 700px;
+        margin: 2rem auto;
+        list-style: none;
+        padding: 0;
+        color: #475569;
+        font-size: 1rem;
+        line-height: 1.7;
+      ">
+        <li>20+ years experience</li>
+        <li>Startup leadership</li>
+        <li>Enterprise experience</li>
+        <li>Product strategy</li>
+        <li>Engineering management</li>
+        <li>AI expertise</li>
+      </ul>
+    </section>
+
+    <!-- Process -->
+    <section style="margin-top: 5rem;">
+      <h2 style="text-align: center; color: var(--color-navy); font-size: 2rem;">
+        Process
+      </h2>
+
+      <div style="
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      ">
+        <ProcessStep number="1" title="Discovery" text="Understand your goals, challenges, and constraints." />
+        <ProcessStep number="2" title="Technical Assessment" text="Evaluate architecture, team, and execution." />
+        <ProcessStep number="3" title="Strategy" text="Define a clear roadmap and priorities." />
+        <ProcessStep number="4" title="Execution" text="Implement improvements and guide the team." />
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section style="margin-top: 5rem;">
+      <h2 style="text-align: center; color: var(--color-navy); font-size: 2rem;">
+        Testimonials
+      </h2>
+
+      <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      ">
+        <TestimonialCard quote="Mehmet transformed our engineering team and roadmap." name="Client A" role="Founder" />
+        <TestimonialCard quote="Clear, actionable technical strategy that saved us months." name="Client B" role="CEO" />
+        <TestimonialCard quote="The best fractional CTO experience we've had." name="Client C" role="COO" />
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="margin-top: 5rem;">
+      <h2 style="text-align: center; color: var(--color-navy); font-size: 2rem;">
+        FAQ
+      </h2>
+
+      <div style="max-width: 700px; margin: 2rem auto;">
+        <FAQ items={faqItems} />
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="margin-top: 5rem;">
+      <CTA />
+    </section>
+
   </main>
 
   <Footer />
