@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CTA from "../../components/CTA.astro";
+---
+
+<BaseLayout
+  title="Startup Technology Strategy – Efficient CTO"
+  description="Build the right product with the right technology stack."
+>
+  <Header />
+
+  <main>
+    <h1 style="font-size:2.5rem; color:var(--color-navy); margin-top:3rem;">
+      Startup Technology Strategy
+    </h1>
+
+    <p style="max-width:700px; margin-top:1rem; color:#475569;">
+      Make smarter technical decisions from day one. Choose the right architecture, stack, roadmap,
+      and execution strategy to accelerate product development.
+    </p>
+
+    <h2 style="margin-top:3rem; color:var(--color-navy);">What We Cover</h2>
+    <ul style="line-height:1.7; color:#475569;">
+      <li>Tech stack selection</li>
+      <li>Architecture planning</li>
+      <li>Product roadmap</li>
+      <li>Hiring strategy</li>
+      <li>Execution planning</li>
+      <li>Founder advisory</li>
+    </ul>
+
+    <CTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
