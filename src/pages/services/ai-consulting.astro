@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CTA from "../../components/CTA.astro";
+---
+
+<BaseLayout
+  title="AI Consulting – Efficient CTO"
+  description="Practical AI strategy and implementation for real business outcomes."
+>
+  <Header />
+
+  <main>
+    <h1 style="font-size:2.5rem; color:var(--color-navy); margin-top:3rem;">
+      AI Consulting
+    </h1>
+
+    <p style="max-width:700px; margin-top:1rem; color:#475569;">
+      Adopt AI in a practical, ROI-driven way. From automation to AI-powered products, get guidance
+      on strategy, architecture, and implementation.
+    </p>
+
+    <h2 style="margin-top:3rem; color:var(--color-navy);">Capabilities</h2>
+    <ul style="line-height:1.7; color:#475569;">
+      <li>AI readiness assessment</li>
+      <li>AI strategy & roadmap</li>
+      <li>Automation & workflow optimization</li>
+      <li>AI product design</li>
+      <li>Model selection & architecture</li>
+      <li>Integration with existing systems</li>
+    </ul>
+
+    <CTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
