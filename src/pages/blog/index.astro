@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const posts = [
+  {
+    title: "When Should You Hire a Fractional CTO?",
+    slug: "when-should-you-hire-a-fractional-cto",
+    description: "Learn when startups benefit most from fractional CTO leadership."
+  }
+];
+---
+
+<BaseLayout
+  title="Blog – Efficient CTO"
+  description="Articles on technology leadership, AI strategy, architecture, and startup execution."
+>
+  <Header />
+
+  <main>
+    <h1 style="font-size:2.5rem; color:var(--color-navy); margin-top:3rem;">
+      Blog
+    </h1>
+
+    <p style="max-width:700px; margin-top:1rem; color:#475569;">
+      Insights on technology leadership, architecture, AI strategy, and startup execution.
+    </p>
+
+    <div style="margin-top:3rem;">
+      {posts.map((post) => (
+        <a href={`/blog/${post.slug}`} style="
+          display:block;
+          padding:1.5rem;
+          margin-bottom:1rem;
+          background:white;
+          border-radius:var(--radius-lg);
+          box-shadow:var(--shadow-soft);
+          border:1px solid rgba(148,163,184,0.2);
+        ">
+          <h3 style="margin:0; color:var(--color-navy);">{post.title}</h3>
+          <p style="color:#475569; margin-top:0.5rem;">{post.description}</p>
+        </a>
+      ))}
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
