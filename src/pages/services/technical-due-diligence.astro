@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CTA from "../../components/CTA.astro";
+---
+
+<BaseLayout
+  title="Technical Due Diligence – Efficient CTO"
+  description="Assess risks and opportunities before investing or acquiring."
+>
+  <Header />
+
+  <main>
+    <h1 style="font-size:2.5rem; color:var(--color-navy); margin-top:3rem;">
+      Technical Due Diligence
+    </h1>
+
+    <p style="max-width:700px; margin-top:1rem; color:#475569;">
+      Evaluate technology, architecture, team, and execution before investing or acquiring. Identify risks,
+      opportunities, and hidden liabilities.
+    </p>
+
+    <h2 style="margin-top:3rem; color:var(--color-navy);">Assessment Areas</h2>
+    <ul style="line-height:1.7; color:#475569;">
+      <li>Architecture review</li>
+      <li>Code quality</li>
+      <li>Security posture</li>
+      <li>Team capability</li>
+      <li>Delivery velocity</li>
+      <li>Scalability & reliability</li>
+    </ul>
+
+    <CTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
