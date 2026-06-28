@@ -1,0 +1,14 @@
+---
+const { title, description } = Astro.props;
+---
+
+<div style="
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(148,163,184,0.2);
+">
+  <h3 style="margin: 0 0 0.5rem; color: var(--color-navy);">{title}</h3>
+  <p style="color: #475569; font-size: 0.95rem;">{description}</p>
+</div>
