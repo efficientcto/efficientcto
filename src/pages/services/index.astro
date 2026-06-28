@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CTA from "../../components/CTA.astro";
+---
+
+<BaseLayout
+  title="Services – Efficient CTO"
+  description="Explore fractional CTO services, AI consulting, software architecture, engineering leadership, and technical due diligence."
+>
+  <Header />
+
+  <main>
+    <h1 style="text-align:center; color:var(--color-navy); font-size:2.5rem; margin-top:3rem;">
+      Services
+    </h1>
+
+    <p style="text-align:center; max-width:700px; margin:1rem auto; color:#475569;">
+      Strategic technology leadership and hands-on guidance for startups and growing businesses.
+    </p>
+
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.5rem;
+      margin-top:3rem;
+    ">
+      <a href="/services/fractional-cto" class="btn btn-outline">Fractional CTO</a>
+      <a href="/services/ai-consulting" class="btn btn-outline">AI Consulting</a>
+      <a href="/services/software-architecture" class="btn btn-outline">Software Architecture</a>
+      <a href="/services/technical-due-diligence" class="btn btn-outline">Technical Due Diligence</a>
+      <a href="/services/startup-technology-strategy" class="btn btn-outline">Startup Technology Strategy</a>
+    </div>
+
+    <CTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
